@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: kinocheronpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kinocheronpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: kinocheronpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: kinocheronpipelinesjavascriptdocker 
+          image: mycontainerregistry20241209.azurecr.io/kinocheronpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
